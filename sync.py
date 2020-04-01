@@ -32,7 +32,7 @@ SHEETS_BOOL_FIELDS = [
     "active",
     "curbside",
     "delivery",
-    "giftcard",
+   # "giftcard",
     "takeout",
 ]
 
@@ -41,16 +41,16 @@ SHEETS_STRING_FIELDS = [
     "address",
     "cuisine",
     "curbside_instructions",
-    "giftcard_notes",
+   # "giftcard_notes",
     "hours",
     "neighborhood",
     "notes",
     "restaurant_phone",
-    "social",
+    #"social",
 ]
 
 SHEETS_URL_FIELDS = [
-    "giftcard_url",
+    #"giftcard_url",
     "website",
     "delivery_service_websites",
 ]
@@ -121,6 +121,8 @@ These are the values that you need to configure for the script to run:
 
     click.echo("")
 
+from dotenv import load_dotenv
+load_dotenv()
 
 @click.command()
 @click.option("--output-folder", default="_places")
